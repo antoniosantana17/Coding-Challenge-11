@@ -10,3 +10,7 @@ const svg = d3.select("#chart")
   .append("svg")
   .attr("width", svgWidth)
   .attr("height", svgHeight);
+  
+  const xScale = d3.scaleLinear()
+  .domain([0, d3.max(data)])
+  .range([50, svgWidth - 50]);
